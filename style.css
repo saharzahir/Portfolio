@@ -1,5 +1,5 @@
 :root {
-  --color-accent: oklch(70% 0.10 135);
+  --color-accent: oklch(67.901% 0.09191 135.296);
   accent-color: var(--color-accent);
 }
 
