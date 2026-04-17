@@ -52,7 +52,7 @@ form {
   gap: 1em;
 }
 
-label {
+form label {
   display: grid;
   grid-template-columns: subgrid;
   grid-column: 1 / -1;
@@ -102,4 +102,11 @@ section h2 {
 
 ul {
   padding-left: 1.5rem;
+}
+
+.color-scheme {
+  position: absolute;
+  top: 1rem;
+  right: 1rem; 
+  font-size: 80%;
 }
