@@ -41,7 +41,8 @@ nav a:hover {
 
 input,
 textarea,
-button {
+button,
+select {
   font: inherit;
 }
 
