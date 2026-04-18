@@ -60,4 +60,10 @@ let select = document.querySelector(".color-scheme select");
 
 select.addEventListener("input", function (event) {
    document.documentElement.style.setProperty("color-scheme", event.target.value);
+   localStorage.colorScheme = event.target.value;
 });
+
+if ("colorScheme" in localStorage) {
+    document.documentElement.style.setProperty("color-scheme", localStorage.colorScheme);
+        select.value = localStorage.colorScheme;
+}
