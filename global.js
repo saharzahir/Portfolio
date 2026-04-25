@@ -101,3 +101,8 @@ export function renderProjects(projects, containerElement, headingLevel = "h2") 
     containerElement.appendChild(article);
   }
 }
+
+export async function fetchGitHubData(saharzahir) {
+    return fetchJSON(`https://github.com/saharzahir/${saharzahir}`);
+}
+
