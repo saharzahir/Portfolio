@@ -1,20 +1,74 @@
 [
   {
-    "title": "Project 1",
+    "title": "Portfolio Website",
     "year": "2026",
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-    "description": "First project description."
+    "description": "Created a personal website with dynamic JavaScript rendering."
   },
   {
-    "title": "Project 2",
+    "title": "Coffee Party Series",
     "year": "2025",
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-    "description": "Second project description."
+    "description": "Organized and hosted coffee parties by booking DJs, marketing events, and curating an atmosphere that brought people together."
   },
   {
-    "title": "Project 3",
+    "title": "Intro Data Science Project",
     "year": "2024",
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-    "description": "Third project description."
+    "description": "First project exploring basic data analysis concepts."
+  },
+  {
+    "title": "DSC80 Final Project",
+    "year": "2025",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Explored the relationship between protein content and calorie density in recipes."
+  },
+  {
+    "title": "Brown Sugar Oats Analytics",
+    "year": "2025",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Analyzed customer behavior and event performance for my cafe."
+  },
+  {
+    "title": "Brown Sugar Oats Launch",
+    "year": "2023",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Co-founded Brown Sugar Oats, where I helped design the menu, train staff, and build the foundation of the business from the ground up."
+  },
+   {
+    "title": "Concept Album Analysis",
+    "year": "2023",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Wrote a paper analyzing concept albums, focusing on how artists structure narratives and themes across an entire project."
+  },
+  {
+    "title": "Data Visualization Practice",
+    "year": "2024",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Created visualizations to explore patterns in datasets and practiced making plots more clear and user-friendly."
+  },
+  {
+    "title": "SQL Data Exploration",
+    "year": "2024",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Used SQL to query and analyze datasets, focusing on joins, aggregations, and extracting meaningful insights."
+  },
+  {
+    "title": "Machine Learning Practice",
+    "year": "2026",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Worked with basic machine learning models and evaluated their performance using different metrics."
+  },
+  {
+    "title": "Website Development",
+    "year": "2024",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Built responsive web pages using HTML, CSS, and JavaScript while learning how to structure and style content."
+  },
+  {
+    "title": "Data Cleaning Project",
+    "year": "2025",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Cleaned and prepared messy datasets by handling missing values and formatting issues for analysis."
   }
 ]
