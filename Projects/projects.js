@@ -13,7 +13,8 @@ if (title) {
   title.textContent = `${projects.length} Projects`;
 }
 
-// 🔁 FUNCTION: renders pie chart + legend
+  let selectedIndex = -1;
+
 function renderPieChart(projectsGiven) {
   let rolledData = d3.rollups(
     projectsGiven,
@@ -25,7 +26,7 @@ function renderPieChart(projectsGiven) {
     value: count,
     label: year
   }));
-
+  
   let arcGenerator = d3.arc().innerRadius(0).outerRadius(50);
   let sliceGenerator = d3.pie().value(d => d.value);
   let arcData = sliceGenerator(data);

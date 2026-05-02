@@ -148,3 +148,20 @@ ul {
   .legend {
     flex: 1;
   }
+
+  #project-pie-plot path {
+    cursor: pointer;
+    transition: 300;
+  }
+
+  #projects-pie-plot:has(path:hover) path:not(:hover) {
+    opacity: 0.5;
+  }
+
+  .selected:is(path) {
+    fill: var(--color);
+  }
+
+  .legend .select {
+    font-weight: bold;
+  }
