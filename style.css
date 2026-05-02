@@ -111,17 +111,30 @@ ul {
   font-size: 80%;
 }
 
+/* 🎯 FIXED PIE + LAYOUT */
+
 #projects-pie-plot {
-  max-width: 20em;
-  margin-block: 2em;
+  width: 12em;
+  height: 12em;
+  margin: 0;
   overflow: visible;
 }
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  margin-block: 1em;
+  margin-bottom: 1em;
+}
+
+/* 🎯 LEGEND */
 
 .legend {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
   gap: 1em;
-  margin-top: 1em;
+  margin-top: 0;
   flex: 1;
 }
 
@@ -137,17 +150,6 @@ ul {
   background: var(--color);
   display: inline-block;
   border-radius: 3px;
-}
-
-.container {
-  display: flex;
-  align-items: flex-start;
-  gap: 2em;
-  margin-block: 1em;
-}
-
-.container { 
-  margin-bottom: 1em;
 }
 
 #projects-pie-plot path {
@@ -170,6 +172,7 @@ ul {
 .legend .selected {
   font-weight: bold;
 }
+
 
 .searchBar {
   margin-bottom: 1em;
