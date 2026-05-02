@@ -13,14 +13,16 @@ if (title) {
   title.textContent = `${projects.length} Projects`;
 }
 
-let data = [
-  {value: 1, label: 'apples'},
-  {value: 2, label: 'oranges'},
-  {value: 3, label: 'mangoes'},
-  {value: 4, label: 'pears'},
-  {value: 5, label: 'limes'},
-  {value: 6, label: 'cherries'}
-];
+let rolledData = d3.rollups(
+  projects,
+  v => v.length,
+  d => d.year
+);
+
+let data = rolledData.map(([year, count]) => ({
+  vale: count,
+  label: year
+}));
 
 let arcGenerator = d3.arc().innerRadius(0).outerRadius(50);
 
