@@ -20,7 +20,7 @@ let rolledData = d3.rollups(
 );
 
 let data = rolledData.map(([year, count]) => ({
-  vale: count,
+  value: count,
   label: year
 }));
 
