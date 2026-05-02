@@ -13,11 +13,18 @@ if (title) {
   title.textContent = `${projects.length} Projects`;
 }
 
-let data = [1, 2, 3, 4, 5, 5];
+let data = [
+  {value: 1, label: 'apples'},
+  {value: 2, label: 'oranges'},
+  {value: 3, label: 'mangoes'},
+  {value: 4, label: 'pears'},
+  {value: 5, label: 'limes'},
+  {value: 6, label: 'cherries'}
+];
 
 let arcGenerator = d3.arc().innerRadius(0).outerRadius(50);
 
-let sliceGenerator = d3.pie();
+let sliceGenerator = d3.pie().value(d => d.value);
 
 let arcData = sliceGenerator(data);
 
