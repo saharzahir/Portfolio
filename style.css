@@ -141,9 +141,13 @@ ul {
 
 .container {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 2em;
-  margin-block: 2em;
+  margin-block: 1em;
+}
+
+.container { 
+  margin-bottom: 1em;
 }
 
 #projects-pie-plot path {
@@ -165,4 +169,8 @@ ul {
 
 .legend .selected {
   font-weight: bold;
+}
+
+.searchBar {
+  margin-bottom: 1em;
 }
