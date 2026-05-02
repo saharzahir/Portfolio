@@ -13,7 +13,7 @@ if (title) {
   title.textContent = `${projects.length} Projects`;
 }
 
-let data = [1, 2];
+let data = [1, 2, 3, 4, 5, 5];
 
 let arcGenerator = d3.arc().innerRadius(0).outerRadius(50);
 
@@ -23,12 +23,12 @@ let arcData = sliceGenerator(data);
 
 let arcs = arcData.map(d => arcGenerator(d));
 
-let colors = ['gold', 'purple'];
+let colors = d3.scaleOrdinal(d3.schemeTableau10);
 
 let svg = d3.select('#projects-pie-plot');
 
 arcs.forEach((arc, i) => {
   svg.append('path')
     .attr('d', arc)
-    .attr('fill', colors[i]);
+    .attr('fill', colors(i));
 });
