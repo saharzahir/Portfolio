@@ -41,16 +41,35 @@ function renderPieChart(projectsGiven) {
   legend.selectAll('li').remove();
 
   arcs.forEach((arc, i) => {
-    svg.append('path')
-      .attr('d', arc)
-      .attr('fill', colors(i));
-  });
+  svg.append('path')
+    .attr('d', arc)
+    .attr('fill', colors(i))
+    .attr('class', i === selectedIndex ? 'selected' : '')
+    .on('click', () => {
+      selectedIndex = selectedIndex === i ? -1 : i;
+
+      svg.selectAll('path')
+        .attr('class', (_, idx) => idx === selectedIndex ? 'selected' : '');
+
+      legend.selectAll('li')
+        .attr('class', (_, idx) => idx === selectedIndex ? 'selected' : '');
+
+      if (selectedIndex === -1) {
+        renderProjects(projectsGiven, projectsContainer, 'h2');
+      } else {
+        let selectedYear = data[selectedIndex].label;
+        let filteredProjects = projectsGiven.filter(project => project.year == selectedYear);
+        renderProjects(filteredProjects, projectsContainer, 'h2');
+      }
+    });
+});
 
   data.forEach((d, i) => {
-    legend.append('li')
-      .attr('style', `--color:${colors(i)}`)
-      .html(`<span class="swatch"></span> ${d.label} <em>(${d.value})</em>`);
-  });
+  legend.append('li')
+    .attr('style', `--color:${colors(i)}`)
+    .attr('class', i === selectedIndex ? 'selected' : '')
+    .html(`<span class="swatch"></span> ${d.label} <em>(${d.value})</em>`);
+});
 }
 
 renderPieChart(projects);
