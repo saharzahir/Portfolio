@@ -13,42 +13,46 @@ if (title) {
   title.textContent = `${projects.length} Projects`;
 }
 
-let rolledData = d3.rollups(
-  projects,
-  v => v.length,
-  d => d.year
-);
+// 🔁 FUNCTION: renders pie chart + legend
+function renderPieChart(projectsGiven) {
+  let rolledData = d3.rollups(
+    projectsGiven,
+    v => v.length,
+    d => d.year
+  );
 
-let data = rolledData.map(([year, count]) => ({
-  value: count,
-  label: year
-}));
+  let data = rolledData.map(([year, count]) => ({
+    value: count,
+    label: year
+  }));
 
-let arcGenerator = d3.arc().innerRadius(0).outerRadius(50);
+  let arcGenerator = d3.arc().innerRadius(0).outerRadius(50);
+  let sliceGenerator = d3.pie().value(d => d.value);
+  let arcData = sliceGenerator(data);
+  let arcs = arcData.map(d => arcGenerator(d));
 
-let sliceGenerator = d3.pie().value(d => d.value);
+  let colors = d3.scaleOrdinal(d3.schemeTableau10);
 
-let arcData = sliceGenerator(data);
+  let svg = d3.select('#projects-pie-plot');
+  svg.selectAll('path').remove();
 
-let arcs = arcData.map(d => arcGenerator(d));
+  let legend = d3.select('.legend');
+  legend.selectAll('li').remove();
 
-let colors = d3.scaleOrdinal(d3.schemeTableau10);
+  arcs.forEach((arc, i) => {
+    svg.append('path')
+      .attr('d', arc)
+      .attr('fill', colors(i));
+  });
 
-let svg = d3.select('#projects-pie-plot');
+  data.forEach((d, i) => {
+    legend.append('li')
+      .attr('style', `--color:${colors(i)}`)
+      .html(`<span class="swatch"></span> ${d.label} <em>(${d.value})</em>`);
+  });
+}
 
-arcs.forEach((arc, i) => {
-  svg.append('path')
-    .attr('d', arc)
-    .attr('fill', colors(i));
-});
-
-let legend = d3.select('.legend');
-
-data.forEach((d, i) => {
-  legend.append('li')
-    .attr('style', `--color:${colors(i)}`)
-    .html(`<span class="swatch"></span> ${d.label} <em>(${d.value})</em>`);
-});
+renderPieChart(projects);
 
 let query = '';
 let searchInput = document.querySelector('.searchBar');
@@ -62,4 +66,5 @@ searchInput.addEventListener('input', event => {
   });
 
   renderProjects(filteredProjects, projectsContainer, 'h2');
+  renderPieChart(filteredProjects);
 });
