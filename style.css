@@ -118,20 +118,10 @@ ul {
   overflow: visible;
 }
 
-.container {
-  display: flex;
-  align-items: center;
-  gap: 2em;
-}
-
 .legend {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
   gap: 1em;
-  border: 1px solid oklch(80% 3% 200);
-  padding: 1em;
-  margin-block: 2em;
-  flex: 1;
 }
 
 .legend li {
@@ -142,10 +132,20 @@ ul {
 
 .swatch {
   width: 1em;
-  height: 1em;
+  aspect-ratio: 1 / 1;
   background: var(--color);
   display: inline-block;
   border-radius: 50%;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+}
+
+.legend {
+  flex: 1;
 }
 
 #projects-pie-plot path {
@@ -167,8 +167,4 @@ ul {
 
 .legend .selected {
   font-weight: bold;
-}
-
-.searchBar {
-  margin-bottom: 1em;
 }
