@@ -116,3 +116,24 @@ ul {
     margin-block: 2em;
     overflow: visible;
   }
+
+  .legend {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
+    gap: 1em;
+    margin-top: 1em;
+  }
+
+  .legend li {
+    display: flex;
+    align-items: center;
+    gap: 0.5;
+  }
+
+  .swatch {
+    width: 1em;
+    height: 1em;
+    background: var(--color);
+    display: inline-block;
+    border-radius: 3px;
+  }
