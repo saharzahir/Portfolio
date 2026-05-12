@@ -10,6 +10,7 @@ let pages = [
   { url: "Contact/", title: "Contact" },
   { url: "Resume/", title: "Resume" },
   { url: "https://github.com/saharzahir", title: "GitHub" },
+  { url: "meta/", title: "Meta" },
   {
     url: "https://www.linkedin.com/in/sahar-zahir-814258292/",
     title: "LinkedIn"
