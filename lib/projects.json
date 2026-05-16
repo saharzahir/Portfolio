@@ -35,17 +35,18 @@
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
     "description": "Co-founded Brown Sugar Oats, where I helped design the menu, train staff, and build the foundation of the business from the ground up."
   },
-   {
+  {
     "title": "Concept Album Analysis",
     "year": "2023",
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
     "description": "Wrote a paper analyzing concept albums, focusing on how artists structure narratives and themes across an entire project."
   },
   {
-    "title": "Data Visualization Practice",
-    "year": "2024",
-    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-    "description": "Created visualizations to explore patterns in datasets and practiced making plots more clear and user-friendly."
+    "title": "Bikewatching",
+    "year": "2026",
+    "image": "https://images.unsplash.com/photo-1541625602330-2277a4c46182?auto=format&fit=crop&w=800&q=80",
+    "description": "An interactive Mapbox and D3 visualization of BlueBikes traffic in Boston and Cambridge with time-based filtering.",
+    "url": "https://saharzahir.github.io/bikewatching/"
   },
   {
     "title": "SQL Data Exploration",
